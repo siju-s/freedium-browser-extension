@@ -3,17 +3,20 @@
   "version": "1.2.0",
   "manifest_version": 2,
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": false
   },
-  "permissions": [
-    "contextMenus",
-    "storage"
-  ],
+  "permissions": ["activeTab", "contextMenus", "storage"],
   "browser_action": {
-    "default_popup": "options.html"
+    "default_title": "Open in Freedium"
+  },
+  "commands": {
+    "convert-tab": {
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
+      "description": "Open the current tab in Freedium"
+    }
   },
   "options_ui": {
     "page": "options.html",

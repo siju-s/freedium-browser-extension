@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Open in Freedium - Options</title>
@@ -18,6 +18,12 @@
       }
       textarea {
         width: 99%;
+      }
+      input[type="url"] {
+        width: 99%;
+      }
+      hr {
+        margin: 1.5em 0;
       }
     </style>
   </head>
@@ -42,6 +48,23 @@
       placeholder="*://*.example.com/*"
     >
     </textarea>
+
+    <hr />
+
+    <h3>Freedium mirror</h3>
+    <p>
+      Freedium mirrors move from time to time. If articles stop loading, put the
+      current mirror address here.
+    </p>
+
+    <input
+      id="mirror_url"
+      name="mirror_url"
+      type="url"
+      placeholder="https://freedium-mirror.cfd"
+    />
+
+    <hr />
 
     <button id="save">Save</button>
     <div id="status"></div>
